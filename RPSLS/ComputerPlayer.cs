@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
 {
-    internal class ComputerPlayer
+     public class ComputerPlayer:Player
     {
+        Random rand;  
+
+        public ComputerPlayer() : base("Computer")
+        {
+
+        }
+
+        public override void ChooseGesture()
+        {
+            rand = new Random(4);
+
+        }
+
     }
 }

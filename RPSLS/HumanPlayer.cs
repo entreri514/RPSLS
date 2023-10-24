@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
 {
-    internal class HumanPlayer
+     public class HumanPlayer : Player
     {
+
+
+        public HumanPlayer() : base("Player One")
+        {
+
+        }
+
+        public override void ChooseGesture()
+        {
+            Console.WriteLine(gestures);
+            Console.WriteLine("Please choose a gesture: ");
+            chosenGesture = Console.ReadLine();
+        }
     }
 }
