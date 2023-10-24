@@ -50,12 +50,13 @@ namespace RPSLS
                 ChooseNumberOfHumanPlayers(0);
             }
             numPlayers = int.Parse(userInput);
+         
             return numPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-
+                
         }
 
         public void CompareGestures()
@@ -72,6 +73,7 @@ namespace RPSLS
         {
             WelcomeMessage();
             ChooseNumberOfHumanPlayers(0);
+            CreatePlayerObjects(0);
         }
     }
 }
