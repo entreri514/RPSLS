@@ -11,6 +11,7 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
         Random rand;  
 
         public ComputerPlayer() : base("Computer")
+            
         {
 
         }
@@ -18,7 +19,9 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
         public override void ChooseGesture()
         {
             rand = new Random(4);
+            
 
+            chosenGesture = gestures[rand.Next(4)];
         }
 
     }
