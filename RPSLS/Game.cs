@@ -60,6 +60,7 @@ namespace RPSLS
         {
             string input;
             Console.WriteLine("Enter name for Player 1: ");
+            HumanPlayer playerOne = new HumanPlayer();
             HumanPlayer.playerOne = Console.ReadLine();
             if (numberOfHumanPlayers == 2)
             {
@@ -90,6 +91,7 @@ namespace RPSLS
             WelcomeMessage();
             ChooseNumberOfHumanPlayers(0);
             CreatePlayerObjects(0);
+            CompareGestures();
         }
     }
 }
