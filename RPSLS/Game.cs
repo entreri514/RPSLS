@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,9 +38,19 @@ namespace RPSLS
 
         }
 
-        public int ChooseNumberOfHumanPlayers()
+        public int ChooseNumberOfHumanPlayers(int numPlayers)
         {
-            return 0;
+            string userInput;
+            Console.WriteLine("Please enter number of players <1> or <2>: ");
+            userInput = Console.ReadLine();
+
+            if (userInput != "1" & userInput != "2")
+            {
+                Console.WriteLine("Please enter <1> or <2>");
+                ChooseNumberOfHumanPlayers(0);
+            }
+            numPlayers = int.Parse(userInput);
+            return numPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
@@ -60,6 +71,7 @@ namespace RPSLS
         public void RunGame()
         {
             WelcomeMessage();
+            ChooseNumberOfHumanPlayers(0);
         }
     }
 }
