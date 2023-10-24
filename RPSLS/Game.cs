@@ -1,5 +1,7 @@
-﻿using System;
+﻿using RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -10,8 +12,8 @@ namespace RPSLS
     internal class Game
     {
         //Member Variabes (HAS A)
-        public Player playerOne;
-        public Player playerTwo;
+        public HumanPlayer playerOne;
+        public HumanPlayer playerTwo;
 
         //Constructor
         public Game()
@@ -56,7 +58,21 @@ namespace RPSLS
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-                
+            string input;
+            Console.WriteLine("Enter name for Player 1: ");
+            HumanPlayer.playerOne = Console.ReadLine();
+            if (numberOfHumanPlayers == 2)
+            {
+                Console.WriteLine("Enter name for Player 2: ");
+                HumanPlayer.playerTwo = Console.ReadLine();
+            }
+            else
+            {
+                ComputerPlayer playerTwo = new ComputerPlayer();
+                ComputerPlayer.playerTwo = "Computer";
+            }
+
+            
         }
 
         public void CompareGestures()
