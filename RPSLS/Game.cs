@@ -58,10 +58,12 @@ namespace RPSLS
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
+            
             string input;
             Console.WriteLine("Enter name for Player 1: ");
-            HumanPlayer playerOne = new HumanPlayer();
-            HumanPlayer.playerOne = Console.ReadLine();
+            HumanPlayer name = new HumanPlayer();
+            input = Console.ReadLine();
+            HumanPlayer playerOneName = input;
             if (numberOfHumanPlayers == 2)
             {
                 Console.WriteLine("Enter name for Player 2: ");
