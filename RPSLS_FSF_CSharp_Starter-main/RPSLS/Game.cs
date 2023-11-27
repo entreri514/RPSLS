@@ -12,8 +12,8 @@ namespace RPSLS
     internal class Game
     {
         //Member Variabes (HAS A)
-        public HumanPlayer playerOne;
-        public HumanPlayer playerTwo;
+        public Player playerOne;
+        public Player playerTwo;
 
         //Constructor
         public Game()
@@ -67,20 +67,88 @@ namespace RPSLS
             if (numberOfHumanPlayers == 2)
             {
                 Console.WriteLine("Enter name for Player 2: ");
-                HumanPlayer.playerTwo = Console.ReadLine();
+                playerName = Console.ReadLine();
+                playerTwo = new HumanPlayer(playerName);
             }
             else
             {
-                ComputerPlayer playerTwo = new ComputerPlayer();
-                ComputerPlayer.playerTwo = "Computer";
+                playerTwo = new ComputerPlayer();
             }
 
             
         }
 
-        public void CompareGestures()
+        public void CompareGestures(string plyrOneGesture, string plyrTwoGesture)
         {
-
+            if (plyrOneGesture == plyrTwoGesture)
+            {
+                Console.WriteLine("A tie.");
+            }
+            else if (plyrOneGesture == "rock")
+            {
+                if (plyrTwoGesture == "scissors" || plyrTwoGesture == "lizard")
+                {
+                    Console.WriteLine(playerOne.name + " scores!");
+                    playerOne.score++;
+                }
+                else
+                {
+                    Console.WriteLine(playerTwo.name + " scores!");
+                    playerTwo.score++;
+                }
+            }
+            else if (plyrOneGesture == "scissors")
+            {
+                if (plyrTwoGesture == "lizard" || plyrTwoGesture == "paper")
+                {
+                    Console.WriteLine(playerOne.name + " scores!");
+                    playerOne.score++;
+                }
+                else
+                {
+                    Console.WriteLine(playerTwo.name + " scores!");
+                    playerTwo.score++;
+                }
+            }
+            else if (plyrOneGesture == "paper")
+            {
+                if (plyrTwoGesture == "rock" || plyrTwoGesture == "Spock")
+                {
+                    Console.WriteLine(playerOne.name + " scores!");
+                    playerOne.score++;
+                }
+                else
+                {
+                    Console.WriteLine(playerTwo.name + " scores!");
+                    playerTwo.score++;
+                }
+            }
+            else if (plyrOneGesture == "lizard")
+            {
+                if (plyrTwoGesture == "paper" || plyrTwoGesture == "Spock")
+                {
+                    Console.WriteLine(playerOne.name + " scores!");
+                    playerOne.score++;
+                }
+                else
+                {
+                    Console.WriteLine(playerTwo.name + " scores!");
+                    playerTwo.score++;
+                }
+            }
+            else if (plyrOneGesture == "Spock")
+            {
+                if (plyrTwoGesture == "rock" || plyrTwoGesture == "scissors")
+                {
+                    Console.WriteLine(playerOne.name + " scores!");
+                    playerOne.score++;
+                }
+                else
+                {
+                    Console.WriteLine(playerTwo.name + " scores!");
+                    playerTwo.score++;
+                }
+            }
         }
 
         public void DisplayGameWinner()
@@ -93,7 +161,12 @@ namespace RPSLS
             WelcomeMessage();
             int numOfPlayers = ChooseNumberOfHumanPlayers(0);
             CreatePlayerObjects(0);
-            CompareGestures();
+            while (playerOne.score < 3 && playerTwo.score < 3)
+            {
+                playerOne.ChooseGesture();
+                playerTwo.ChooseGesture();
+                CompareGestures(playerOne.chosenGesture, playerTwo.chosenGesture);
+            }
             DisplayGameWinner();
         }
     }
