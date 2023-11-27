@@ -17,15 +17,25 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
 
         public override void ChooseGesture()
         {
-            Console.WriteLine(gestures);
-            Console.WriteLine("Please choose a gesture: ");
-            chosenGesture = Console.ReadLine();
-            if (chosenGesture != "rock" && chosenGesture != "paper" && chosenGesture != "scissors" && chosenGesture != "lizard" && chosenGesture != "Spock")
+            int flag = 0;
+            do
             {
+                if (flag > 0)
                 {
                     Console.WriteLine("Try again.");
                 }
-            }
+                Console.WriteLine("Please choose a gesture: ");
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine($"{gestures[i]}/n");
+                }
+                chosenGesture = Console.ReadLine();
+                flag++;
+            } while (chosenGesture != "rock" && chosenGesture != "paper" && chosenGesture != "scissors" && chosenGesture != "lizard" && chosenGesture != "Spock");
+            
+                
+                
         }
+        
     }
 }
