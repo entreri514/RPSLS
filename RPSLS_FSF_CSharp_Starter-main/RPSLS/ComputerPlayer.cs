@@ -13,15 +13,12 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
         public ComputerPlayer() : base("Computer")
             
         {
-
+            rand = new Random();
         }
 
         public override void ChooseGesture()
         {
-            rand = new Random(4);
-            
-
-            chosenGesture = gestures[rand.Next(4)];
+            chosenGesture = gestures[rand.Next(gestures.Count)];
         }
 
     }

@@ -20,7 +20,7 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
             Console.WriteLine(gestures);
             Console.WriteLine("Please choose a gesture: ");
             chosenGesture = Console.ReadLine();
-            if (chosenGesture != "rock" & chosenGesture != "paper" & chosenGesture != "scissors" & chosenGesture != "lizard" & chosenGesture != "Spock")
+            if (chosenGesture != "rock" && chosenGesture != "paper" && chosenGesture != "scissors" && chosenGesture != "lizard" && chosenGesture != "Spock")
             {
                 {
                     Console.WriteLine("Try again.");
