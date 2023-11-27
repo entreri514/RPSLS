@@ -10,7 +10,7 @@ namespace RPSLS.RPSLS_FSF_CSharp_Starter_main.RPSLS
     {
 
 
-        public HumanPlayer(string playerOneName) : base("Player One")
+        public HumanPlayer(string name) : base(name)
         {
 
         }
