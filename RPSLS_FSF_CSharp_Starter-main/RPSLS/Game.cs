@@ -46,13 +46,16 @@ namespace RPSLS
             Console.WriteLine("Please enter number of players <1> or <2>: ");
             userInput = Console.ReadLine();
 
-            if (userInput != "1" & userInput != "2")
+            if (userInput != "1" && userInput != "2")
             {
                 Console.WriteLine("Please enter <1> or <2>");
-                ChooseNumberOfHumanPlayers(0);
+                numPlayers = ChooseNumberOfHumanPlayers(0);
             }
-            numPlayers = int.Parse(userInput);
-         
+            else
+            {
+                numPlayers = int.Parse(userInput);
+            }
+            
             return numPlayers;
         }
 
@@ -91,9 +94,10 @@ namespace RPSLS
         public void RunGame()
         {
             WelcomeMessage();
-            ChooseNumberOfHumanPlayers(0);
+            int numOfPlayers = ChooseNumberOfHumanPlayers(0);
             CreatePlayerObjects(0);
             CompareGestures();
+            DisplayGameWinner();
         }
     }
 }
