@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.7.34202.233
+VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS", "RPSLS.csproj", "{77A90CA0-4D67-417B-A890-115AFAC319F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSLS", "RPSLS\RPSLS.csproj", "{CDF2AF7D-56BE-476E-908C-A3107BC43816}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77A90CA0-4D67-417B-A890-115AFAC319F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77A90CA0-4D67-417B-A890-115AFAC319F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77A90CA0-4D67-417B-A890-115AFAC319F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77A90CA0-4D67-417B-A890-115AFAC319F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF2AF7D-56BE-476E-908C-A3107BC43816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF2AF7D-56BE-476E-908C-A3107BC43816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF2AF7D-56BE-476E-908C-A3107BC43816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF2AF7D-56BE-476E-908C-A3107BC43816}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BF2C23C7-0E8A-431A-8C5F-BF4724C4A9FE}
+		SolutionGuid = {A9383F4D-CE77-4487-B0DC-977BE7ABC066}
 	EndGlobalSection
 EndGlobal
